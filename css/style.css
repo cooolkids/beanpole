@@ -1,0 +1,376 @@
+@import url(./reset.css);
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none;
+}
+
+.swiper-button-next {
+    transform: rotate(180deg);
+
+}
+
+
+
+
+/* -------------------------- */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 90;
+    background: #666666;
+}
+
+header.first {
+    background: transparent;
+    z-index: 99;
+    position: absolute;
+}
+
+header:hover {
+    background: #fff;
+}
+
+header::after {
+    width: 100%;
+    height: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .35s;
+}
+
+header.on::after {
+    height: 420px;
+    z-index: 10;
+}
+
+.flex {
+    display: flex;
+}
+
+.wrap {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.wrap h1 a {
+    width: 176.1px;
+    height: 19px;
+    top: 46px;
+    position: absolute;
+    background-image: url(../images/logo.white.svg);
+    z-index: 99;
+}
+
+header:hover h1 a {
+    background-image: url(../images/logo.svg);
+}
+
+
+nav a {
+    display: block;
+}
+
+li.main-menu {
+    position: relative;
+    width: 190px;
+    flex: 1;
+    color: #fff;
+    font-size: 18px;
+    padding: 0 20px;
+    z-index: 99;
+    font-weight: 500;
+}
+
+/* h5 {
+    position: fixed;
+    z-index: 99;
+    font-size: 50px;
+} */
+
+
+ul.sub-menu {
+    z-index: 99;
+    position: absolute;
+    display: none;
+    top: 40px;
+    width: 80%;
+    color: #848484;
+    background: #ffffff;
+}
+
+ul.sub-menu a {
+    font-weight: 600;
+    line-height: 40px;
+}
+
+ul.sub-menu li:hover a {
+    color: #144835;
+}
+
+
+header:hover li.main-menu {
+    font-weight: 600;
+    color: #000;
+}
+
+
+li.main-menu:hover ul.sub-menu {
+    z-index: 99;
+    color: #848484;
+}
+
+ul.sub-menu li {
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+
+
+li.main-menu::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    top: 32px;
+    width: 0;
+    height: 4px;
+    background: #144835;
+    transition: 0.3s all 0s;
+}
+
+li.main-menu.on:hover::after {
+    width: calc(100% - 60px);
+}
+
+
+
+
+
+
+/* -------------------section------------------- */
+
+
+main {
+    position: relative;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#sec1 {
+    position: absolute;
+
+}
+
+#sect1 h2 {
+    font-size: 80px;
+    line-height: 1.8em;
+}
+
+#sect1 p {
+    font-size: 16px;
+}
+
+#sect1 article {
+    position: absolute;
+    top: 51%;
+    left: 100px;
+    transform: translateY(-50%);
+    color: #fff;
+    text-align: left;
+}
+
+
+
+#sect2 {
+    background-image: url(../images/1.mbg.jpg);
+}
+
+#sect3 {
+    background-image: url(../images/2.mbg.jpg);
+    /* background-attachment: fixed; */
+}
+
+#sect4 {
+    background-image: url(../images/3.mbg.jpg);
+}
+
+#sect5 {
+    background-image: url(../images/4.mbg.jpg);
+}
+
+
+
+
+.summary1 {
+    position: absolute;
+    right: 7%;
+    top: 25%;
+    z-index: 80;
+}
+
+.summary {
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    z-index: 80;
+}
+
+
+
+.summary h2,
+.summary1 h2 {
+    font-size: 56px;
+    color: #fff;
+    line-height: 82px;
+}
+
+
+.summary .col,
+.summary1 .col {
+    font-size: 18px;
+    color: #fff;
+    line-height: 40px;
+}
+
+
+#sect3 .summary h2 {
+    font-size: 56px;
+    color: #000;
+    line-height: 82px;
+}
+
+#sect3 .summary .col {
+    color: #000;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+/* -------------------------footer-------------------------------- */
+footer {
+    width: 100%;
+    position: relative;
+    background: #EBEBE6;
+
+}
+
+footer .footer-wrap {
+    width: 90%;
+    margin: auto;
+    padding: 50px 0;
+}
+
+footer img {
+    width: 164px;
+    height: 23px;
+}
+
+.shop {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 31px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #CFCFCF;
+}
+
+li.insta {
+    position: absolute;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.insta img {
+    position: absolute;
+    right: 13px;
+    z-index: 99;
+    bottom: 38px;
+}
+
+li.insta::before {
+    content: '';
+    background: #144835;
+    border-radius: 50px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 70px;
+    bottom: 25px;
+    z-index: 1;
+}
+
+.shop ul li {
+    padding-right: 20px;
+    font-size: 14px;
+    margin-top: 20px;
+    color: #7c7c7c;
+}
+
+.copyright {
+    font-size: 16px;
+
+}
+
+.copyright p {
+    margin-top: 30px;
+    color: #7c7c7c;
+}
