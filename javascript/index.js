@@ -48,6 +48,14 @@ $('li.main-menu a').click(function () {
 })
 
 
+$('nav ul li a').click(function () {
+  let secHref = $(this).attr('href')
+  let secTop = $(secHref).offset().top()
+
+  $('nav ul li a').removeClass('on')
+  $(this).addClass('on')
+  $('html').animate({ 'scrollTop': secTop })
+})
 
 $('section').mousewheel(function (e, delta) {
   if (delta > 0) {
@@ -61,7 +69,25 @@ $('section').mousewheel(function (e, delta) {
 
 let sect2top = $('#sect2').offset().top
 
+$(window).scroll(function () {
+  let scrTop = $(this).scrollTop()
 
+
+
+  $('section').each(function (i) {
+    let secTop = $(this).offset().top
+    // console.log(secTop);
+    if (scrTop >= secTop) {
+      // $('.wrap').removeClass('on')
+      // $('.wrap').eq(i).addClass('on')
+      // $('nav li a').removeClass('on')
+      // $('nav li').eq(i).find('a').addClass('on')
+    }
+
+
+  })
+ init()
+})
 
 function init(){
   let scrTop = $(window).scrollTop()
