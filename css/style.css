@@ -247,7 +247,9 @@ section {
 
 #sect3 {
     background-image: url(../images/2.mbg.jpg);
-    /* background-attachment: fixed; */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 #sect4 {
